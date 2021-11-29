@@ -18,5 +18,18 @@ Akhirnya,
 Analisis data eksplorasi dilakukan untuk mengambil insight dari data tersebut.
 
 ## Algoritma :
-
+Berikut merupakan Model Algoritma yang digunakan, beserta akurasi dari model tersebut 
+  1. K Nearest Neighbours <br>
+    Akurasi model: 97%
+  2. Decision Tree <br>
+    Akurasi Model: 98% 
+  3. Support Vector Machine<br>
+    Akurasi Model: 93%
+  4. Linear Regression<br>
+    Akurasi Model: 95%
+  5. Random Forest<br>
+    Akurasi Model: 100% 
+  6. XGBoost<br>
+    Akurasi Model: 99%
+Berdasarkan Akurasi Model yang didapat, model yang digunakan adalah Random Forest
 ## Deployment : 

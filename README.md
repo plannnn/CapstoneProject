@@ -30,6 +30,11 @@ Berikut merupakan Model Algoritma yang digunakan, beserta akurasi dari model ter
   5. Random Forest<br>
     Akurasi Model: 100% 
   6. XGBoost<br>
-    Akurasi Model: 99%
+    Akurasi Model: 99%<br><br>
 Berdasarkan Akurasi Model yang didapat, model yang digunakan adalah Random Forest
-## Deployment : 
+## Deployment : <br>
+## Bentuk Website:<br>
+Sejauh ini Bentuk Web sebagai berikut, (dapat dirubah kedepannya)
+![image](https://user-images.githubusercontent.com/80318560/143866029-1ae4c45e-6948-4fa2-a92c-d186e483e7af.png)
+
+

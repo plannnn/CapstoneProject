@@ -27,9 +27,9 @@ Berikut merupakan Model Algoritma yang digunakan, beserta akurasi dari model ter
     Akurasi Model: 93%
   4. Linear Regression<br>
     Akurasi Model: 95%
-  5. Random Forest
+  5. Random Forest<br>
     Akurasi Model: 100% 
-  6. XGBoost
+  6. XGBoost<br>
     Akurasi Model: 99%
 Berdasarkan Akurasi Model yang didapat, model yang digunakan adalah Random Forest
 ## Deployment : 

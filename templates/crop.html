@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @font-face { 
+                font-family: 'animeace'; 
+                src: url('/anime_ace_bb/animeace2bb_ot/animeace2_reg.otf'); 
+            }
+            @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap'); 
+            body{
+                background-color: #173f35;
+            }
+            label{
+                text-align: center;
+            }
+            h1{
+                color: #e9e0d2;
+            }
+            button{
+                border: solid 1px;
+                background-color: #408e7b;
+                color: #eaa09c;
+                padding: 15px 32px;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+                margin: 4px 2px;
+            }
+            input{
+                float: center;
+                text-align: center;
+            }
+            main{
+                text-align: center;
+            }
+            body{
+                text-align: center;
+            }
+            *{
+                box-sizing: border-box;
+            }
+            .container{
+                width: 1100px;
+                border: 2px solid black;
+                margin: 0 auto;
+            }
+            .flex-column{
+                display: flex;
+                flex-direction: column;
+            }
+            .flex-row{
+                display: flex;
+                flex-direction: row;
+                flex-grow: 1;
+            }
+            .box{
+                font-family: 'M PLUS 1 Code', sans-serif;;
+                flex-grow: 1;
+                background-color: #408e7b;
+                border: 2px solid black;
+                padding: 40px;
+                text-align: center;
+                color: #eaa09c;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Crop Recommendation</h1>
+        <main>
+        <form action="{{url_for('predict')}}" method='post' class="container">
+            <div class="flex-column">
+                <div class="flex-row">
+                    <div class="box">
+                        <label for='n'><b>Nitrogen (N) in the Soil:</b></label>
+                        <input type="text" name="n" placeholder="Enter The Value" required="required" /><br><br>
+                    </div>
+                    <div class="box">
+                        <label for='p'><b>Phosphorous (P):</b></label>
+                        <input type='text' name='p' placeholder='Enter The Value' required='required'><br><br>
+                    </div>
+                    <div class="box">
+                        <label for='k'><b>Potassium (K):</b></label>
+                        <input type='text' name='k' placeholder="Enter The Value" required='required'><br><br>
+                    </div>
+                    <div class="box">
+                        <label for='Temperature'><b>Temperature:</b></label>
+                        <input type='text' name='Temperature' placeholder="Enter The Value in Celcius" required='required'><br><br>
+                    </div>
+                </div>
+                <div class="flex-row">
+                    <div class="box">
+                        <label for="Humidity"><b>Humidity:</b></label><br>
+                        <input type="text" name="Humidity" placeholder="Enter The Value" required='required'><br><br>
+                    </div>
+                    <div class="box">
+                        <label for="PH"><b>PH:</b></label><br>
+                        <input type="text" name="PH" placeholder="Enter The Value" required='required'><br><br>
+                    </div>
+                    <div class="box">
+                        <label for="rain_fall"><B>Rain Fall:</B></label><br>
+                        <input type='text' name='rain_fall' placeholder="Enter In mm"  required='required'><br><br>
+                    </div> 
+                </div>
+            </div>
+            
+        </form>
+            <button class="button">Predict</button><br>
+            {{prediction_text}}
+        </main>    
+    </body>
+</html>

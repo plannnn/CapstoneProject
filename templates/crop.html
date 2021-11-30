@@ -1,112 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
         <style>
-            @font-face { 
-                font-family: 'animeace'; 
-                src: url('/anime_ace_bb/animeace2bb_ot/animeace2_reg.otf'); 
+            ::-webkit-scrollbar {
+                width: 5px;
             }
-            @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap'); 
-            body{
-                background-color: #173f35;
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
             }
-            label{
-                text-align: center;
+            ::-webkit-scrollbar-thumb {
+                background: #22577A;
             }
-            h1{
-                color: #e9e0d2;
-            }
-            button{
-                border: solid 1px;
-                background-color: #408e7b;
-                color: #eaa09c;
-                padding: 15px 32px;
-                display: inline-block;
-                font-size: 16px;
-                cursor: pointer;
-                margin: 4px 2px;
-            }
-            input{
-                float: center;
-                text-align: center;
-            }
-            main{
-                text-align: center;
-            }
-            body{
-                text-align: center;
-            }
-            *{
-                box-sizing: border-box;
-            }
-            .container{
-                width: 1100px;
-                border: 2px solid black;
-                margin: 0 auto;
-            }
-            .flex-column{
-                display: flex;
-                flex-direction: column;
-            }
-            .flex-row{
-                display: flex;
-                flex-direction: row;
-                flex-grow: 1;
-            }
-            .box{
-                font-family: 'M PLUS 1 Code', sans-serif;;
-                flex-grow: 1;
-                background-color: #408e7b;
-                border: 2px solid black;
-                padding: 40px;
-                text-align: center;
-                color: #eaa09c;
-                font-size: 1.5em;
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #38A3A5;
             }
         </style>
+        <title>Creative - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="../static/assets/favico.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../static/css/styles.css" rel="stylesheet" />
     </head>
-    <body>
-        <h1>Crop Recommendation</h1>
-        <main>
-        <form action="{{url_for('predict')}}" method='post' class="container">
-            <div class="flex-column">
-                <div class="flex-row">
-                    <div class="box">
-                        <label for='n'><b>Nitrogen (N) in the Soil:</b></label>
-                        <input type="text" name="n" placeholder="Enter The Value" required="required" /><br><br>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">
+                    <img src="../static/assets/icon.png" alt="Logo Cropred" width="50" height="50">
+                    CroPred
+                </a>
+            </div>
+        </nav>
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">Crop Prediction System </h1>
+                        <hr class="divider" />
                     </div>
-                    <div class="box">
-                        <label for='p'><b>Phosphorous (P):</b></label>
-                        <input type='text' name='p' placeholder='Enter The Value' required='required'><br><br>
+                    <form id="predict" action="{{url_for('predict')}}" method='post' onsubmit ="return false">
+                            <div class="row">
+                                <div class="col">
+                                    <label for='n' class="text-white-75 form-label"><b>Nitrogen (N):</b></label>
+                                    <input type="text" class="form-control form-control-lg" name="n" placeholder="Enter The Value" required="required" /><br><br>
+                                </div>
+                                <div class="col">
+                                    <label for='p' class="text-white-75 form-label"><b>Phosphorous (P):</b></label>
+                                    <input type='text' class="form-control form-control-lg" name='p' placeholder='Enter The Value' required='required'><br><br>
+                                </div>
+                                <div class="col">
+                                    <label for='k' class="text-white-75 form-label"><b>Potassium (K):</b></label>
+                                    <input type='text' class="form-control form-control-lg" name='k' placeholder="Enter The Value" required='required'><br><br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for='Temperature' class="text-white-75 form-label"><b>Temperature:</b></label>
+                                    <input type='text' class="form-control form-control-lg" name='Temperature' placeholder="Enter The Value in Celcius" required='required'><br><br>
+                                </div>
+                                <div class="col">
+                                    <label for="Humidity" class="text-white-75 form-label"><b>Humidity:</b></label><br>
+                                    <input type="text" class="form-control form-control-lg" name="Humidity" placeholder="Enter The Value" required='required'><br><br>
+                                </div>
+                                <div class="col">
+                                    <label for="PH" class="text-white-75 form-label"><b>PH:</b></label><br>
+                                    <input type="text" class="form-control form-control-lg" name="PH" placeholder="Enter The Value" required='required'><br><br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="rain_fall" class="text-white-75 form-label"><B>Rain Fall:</B></label><br>
+                                    <input type='text' class="form-control form-control-lg" name='rain_fall' placeholder="Enter In mm"  required='required'><br><br>
+                                </div> 
+                            </div>
+                            <button class="btn btn-primary btn-xl">Predict</button>
+                            <br>
+                    </form>
+                    <div id="result">
+                        <h1 class="text-white font-weight-bold mt-5">{{prediction_text}}</h1>
                     </div>
-                    <div class="box">
-                        <label for='k'><b>Potassium (K):</b></label>
-                        <input type='text' name='k' placeholder="Enter The Value" required='required'><br><br>
-                    </div>
-                    <div class="box">
-                        <label for='Temperature'><b>Temperature:</b></label>
-                        <input type='text' name='Temperature' placeholder="Enter The Value in Celcius" required='required'><br><br>
-                    </div>
-                </div>
-                <div class="flex-row">
-                    <div class="box">
-                        <label for="Humidity"><b>Humidity:</b></label><br>
-                        <input type="text" name="Humidity" placeholder="Enter The Value" required='required'><br><br>
-                    </div>
-                    <div class="box">
-                        <label for="PH"><b>PH:</b></label><br>
-                        <input type="text" name="PH" placeholder="Enter The Value" required='required'><br><br>
-                    </div>
-                    <div class="box">
-                        <label for="rain_fall"><B>Rain Fall:</B></label><br>
-                        <input type='text' name='rain_fall' placeholder="Enter In mm"  required='required'><br><br>
-                    </div> 
                 </div>
             </div>
-            <button class="button">Predict</button><br>
-        </form>
-            <br>
-            {{prediction_text}}
-        </main>    
+        </header>
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - CroPred</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../static/js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

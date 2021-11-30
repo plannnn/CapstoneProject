@@ -35,6 +35,5 @@ Berdasarkan Akurasi Model yang didapat, model yang digunakan adalah Random Fores
 ## Deployment : <br>
 ## Bentuk Website:<br>
 Sejauh ini Bentuk Web sebagai berikut, (dapat dirubah kedepannya)
-![image](https://user-images.githubusercontent.com/80318560/143866029-1ae4c45e-6948-4fa2-a92c-d186e483e7af.png)
-
+![image](https://user-images.githubusercontent.com/80215981/144064591-22754c37-7b17-4df9-b444-5ad02ab904d8.png)
 

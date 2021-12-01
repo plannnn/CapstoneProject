@@ -32,7 +32,8 @@ Berikut merupakan Model Algoritma yang digunakan, beserta akurasi dari model ter
   6. XGBoost<br>
     Akurasi Model: 99%<br><br>
 Berdasarkan Akurasi Model yang didapat, model yang digunakan adalah Random Forest
-## Deployment : <br>
+## Deployment :
+Aplikasi ini menggunakan platform Heroku untuk Deployment. URL Aplikasi (Sementara): https://cropred.herokuapp.com/
 ## Bentuk Website:<br>
 Sejauh ini Bentuk Web sebagai berikut, (dapat dirubah kedepannya)
 ![image](https://user-images.githubusercontent.com/80215981/144064591-22754c37-7b17-4df9-b444-5ad02ab904d8.png)

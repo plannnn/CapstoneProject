@@ -3,23 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <style>
-            ::-webkit-scrollbar {
-                width: 5px;
-            }
-            ::-webkit-scrollbar-track {
-                background: #f1f1f1;
-            }
-            ::-webkit-scrollbar-thumb {
-                background: #22577A;
-            }
-
-            ::-webkit-scrollbar-thumb:hover {
-                background: #38A3A5;
-            }
-        </style>
         <title>CroPred - Crop Prediction System</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="../static/assets/favico.ico" />
@@ -28,9 +14,8 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <!-- SimpleLightbox plugin CSS-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="../static/css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
@@ -38,7 +23,7 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#page-top">
-                    <img src="../static/assets/icon.png" alt="Logo Cropred" width="50" height="50">
+                    <img src="../static/assets/icon.png" alt="Logo CroPred" width="50" height="50">
                     CroPred
                 </a>
             </div>
@@ -50,59 +35,70 @@
                         <h1 class="text-white font-weight-bold">Crop Prediction System </h1>
                         <hr class="divider" />
                     </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 fs-3 mb-4">Get Decision Information About Crops for Your Farm.</p>
+                    </div>
                     <form id="predict" action="{{url_for('predict')}}" method='post'>
                             <div class="row">
                                 <div class="col">
-                                    <label for='n' class="text-white-75 form-label"><b>Nitrogen (N):</b></label>
-                                    <input type="text" class="form-control form-control-lg" name="n" placeholder="Enter The Value" required="required" /><br><br>
+                                    <label for='n' class="text-white-75 form-label"><b>Nitrogen(N) value in soil</b></label>
+                                    <input type="number" class="form-control form-control-lg" name="n" placeholder="0" min="0" required="required" autocomplete="off"><br><br>
                                 </div>
                                 <div class="col">
-                                    <label for='p' class="text-white-75 form-label"><b>Phosphorous (P):</b></label>
-                                    <input type='text' class="form-control form-control-lg" name='p' placeholder='Enter The Value' required='required'><br><br>
+                                    <label for='p' class="text-white-75 form-label"><b>Phosphorous(P) value in soil</b></label>
+                                    <input type='number' class="form-control form-control-lg" name='p' placeholder='0' min="0" required='required' autocomplete="off"><br><br>
                                 </div>
                                 <div class="col">
-                                    <label for='k' class="text-white-75 form-label"><b>Potassium (K):</b></label>
-                                    <input type='text' class="form-control form-control-lg" name='k' placeholder="Enter The Value" required='required'><br><br>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <label for='Temperature' class="text-white-75 form-label"><b>Temperature:</b></label>
-                                    <input type='text' class="form-control form-control-lg" name='Temperature' placeholder="Enter The Value in Celcius" required='required'><br><br>
-                                </div>
-                                <div class="col">
-                                    <label for="Humidity" class="text-white-75 form-label"><b>Humidity:</b></label><br>
-                                    <input type="text" class="form-control form-control-lg" name="Humidity" placeholder="Enter The Value" required='required'><br><br>
-                                </div>
-                                <div class="col">
-                                    <label for="PH" class="text-white-75 form-label"><b>PH:</b></label><br>
-                                    <input type="text" class="form-control form-control-lg" name="PH" placeholder="Enter The Value" required='required'><br><br>
+                                    <label for='k' class="text-white-75 form-label"><b>Potassium(K) value in soil</b></label>
+                                    <input type='number' class="form-control form-control-lg" name='k' placeholder="0" min="0" required='required' autocomplete="off"><br><br>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <label for="rain_fall" class="text-white-75 form-label"><B>Rain Fall:</B></label><br>
-                                    <input type='text' class="form-control form-control-lg" name='rain_fall' placeholder="Enter In mm"  required='required'><br><br>
+                                    <label for='Temperature' class="text-white-75 form-label"><b>Temperature in celcius</b></label>
+                                    <input type='number' id="floatNumber" class="form-control form-control-lg" name='Temperature' placeholder="0.00" min="0" step=".01" required='required' autocomplete="off"><br><br>
+                                </div>
+                                <div class="col">
+                                    <label for="Humidity" class="text-white-75 form-label"><b>Humidity in percent</b></label><br>
+                                    <input type="number" class="form-control form-control-lg" name="Humidity" placeholder="0" min="0" required='required' autocomplete="off"><br><br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="PH" class="text-white-75 form-label"><b>PH value of the soil</b></label><br>
+                                    <input type="number" id="floatNumber" class="form-control form-control-lg" name="PH" placeholder="0.00" min="0" step=".01" required='required' autocomplete="off"><br><br>
+                                </div>
+                                <div class="col">
+                                    <label for="rain_fall" class="text-white-75 form-label"><B>Rain Fall in millimeters (mm)</B></label><br>
+                                    <input type='number' id="floatNumber" class="form-control form-control-lg" name='rain_fall' placeholder="0.00" min="0" step=".01" required='required' autocomplete="off"><br><br>
                                 </div> 
                             </div>
                             <button class="btn btn-primary btn-xl">Predict</button>
                             <br>
                     </form>
                     <div id="result">
-                        <h1 class="text-white font-weight-bold mt-5">{{prediction_text}}</h1>
+                        <h1 class="text-white font-weight-bold mt-5 mb-5">{{prediction_text}}</h1>
                     </div>
                 </div>
             </div>
         </header>
         <!-- Footer-->
-        <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - CroPred</div></div>
+        <footer class="bg-light py-4">
+            <div class="container px-4 px-lg-5 fs-3"><div class="small text-center text-muted">Copyright &copy; 2021 - CroPred</div></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- SimpleLightbox plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('input#floatNumber').blur(function(){
+                    var num = parseFloat($(this).val());
+                    var cleanNum = num.toFixed(2);
+                    $(this).val(cleanNum);
+                });
+            });
+        </script>
         <script src="../static/js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>

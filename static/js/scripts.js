@@ -1,7 +1,7 @@
-const welcome = document.getElementById('welcome');
-const start = document.getElementById('start');
-const predict = document.getElementById('predict');
-const result = document.getElementById('result');
+var welcome = document.getElementById('welcome');
+var start = document.getElementById('start');
+var predict = document.getElementById('predict');
+var result = document.getElementById('result');
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -36,9 +36,11 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-start.addEventListener("click", function () {
-    predict.classList.remove("d-none")
-    result.classList.remove("d-none")
-    welcome.classList.add("d-none")
-    start.classList.add("d-none")
-});
+if(start){
+    start.addEventListener("click", function () {
+        predict.classList.remove("d-none")
+        result.classList.remove("d-none")
+        welcome.classList.add("d-none")
+        start.classList.add("d-none")
+    });
+}

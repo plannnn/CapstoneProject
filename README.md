@@ -36,5 +36,9 @@ Berdasarkan Akurasi Model yang didapat, model yang digunakan adalah Random Fores
 Aplikasi ini menggunakan platform Heroku untuk Deployment. URL Aplikasi (Sementara): https://cropred.herokuapp.com/
 ## Bentuk Website:<br>
 Sejauh ini Bentuk Web sebagai berikut, (dapat dirubah kedepannya)
-![image](https://user-images.githubusercontent.com/80215981/144064591-22754c37-7b17-4df9-b444-5ad02ab904d8.png)
-
+![image](https://user-images.githubusercontent.com/80215981/145406005-fc51d6c5-c7f8-46fd-be22-a5717d0124d4.png)
+## Demo :
+### Demo Website :<br>
+![Demo Website](https://media.giphy.com/media/xAcdKwMQuFFqkMNEFP/giphy.gif)
+### Demo Mobile :<br>
+![Demo Mobile](https://media.giphy.com/media/9zbShOXfzC5Ex0mZ3Z/giphy.gif)

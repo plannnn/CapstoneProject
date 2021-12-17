@@ -1,7 +1,7 @@
 # CapstoneProject
-Capstone Project Studi Independen
-Team ID: CSD-080
-M004T5007 - Kivlan Khair Wijayanto
+Capstone Project Studi Independen<br>
+Team ID: CSD-080<br>
+M004T5007 - Kivlan Khair Wijayanto<br>
 M298R4297 - Sang Putu Yoga Pramana
 
 # Crop-Recommendation

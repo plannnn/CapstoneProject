@@ -37,19 +37,38 @@ body {
   border-radius: 10rem;
 }
 
-hr.divider {
-  height: 0.2rem;
-  max-width: 3.25rem;
-  margin: 1.5rem auto;
-  background-color: #f4623a;
-  opacity: 1;
+.carousel-inner{
+  width:100%;
+  max-height: 400px !important;
 }
 
+section{
+  padding: 100px 0;
+}
+
+hr.divider {
+  height: 0.2rem;
+  max-width: 15rem;
+  margin: 1.5rem auto;
+  background-color: #00701a;
+  opacity: 1;
+}
+h5{
+  font-weight: bold;
+}
 hr.divider-light {
   background-color: #fff;
 }
+.bg-primary {
+  background-color: #eeeeee !important;
+}
 .btn-primary {
-  background-color: #f4623a !important;
+  background-color: #00701a !important;
+}
+.btn:hover{
+  box-shadow: inset 0 0 10px rgb(255, 255, 255), 0 0 10px rgb(0, 181, 42);
+  outline-color: rgba(0, 112, 26, 1);
+  outline-offset: 10px;
 }
 input[type=number] {
   font-family: "Merriweather Sans", sans-serif;
@@ -74,10 +93,10 @@ input[type=number] {
   padding: 0.75rem 0;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: #f4623a;
+  color: #38A3A5;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #f4623a !important;
+  color: #38A3A5 !important;
 }
 header.masthead {
   padding-top: 10rem;
@@ -89,8 +108,30 @@ header.masthead {
   background-size: cover;
 }
 header.masthead h1, header.masthead .h1 {
-  font-size: 2.25rem;
+  font-size: 2rem;
 }
+.carousel-item > img {
+  height: 400px;
+  width: 100%;
+}
+.carousel-inner:hover{
+  background: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 0 #111;
+  transition: all 0.3s ease;
+}
+.card > img {
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
+}
+.card:hover{
+    background: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 0 #fff;
+    transition: all 0.3s ease;
+}
+
 @media (min-width: 992px) {
   #mainNav {
     box-shadow: none;
@@ -120,13 +161,13 @@ header.masthead h1, header.masthead .h1 {
     color: #212529;
   }
   #mainNav.navbar-shrink .navbar-brand:hover {
-    color: #f4623a;
+    color: #38A3A5;
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
     color: #212529;
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
-    color: #f4623a;
+    color: #38A3A5;
   }
 }
 @media (min-width: 992px) {
@@ -139,13 +180,13 @@ header.masthead h1, header.masthead .h1 {
     font-size: 1.15rem;
   }
   header.masthead h1, header.masthead .h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
 }
 @media (min-width: 1200px) {
   header.masthead h1, header.masthead .h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 690px) {

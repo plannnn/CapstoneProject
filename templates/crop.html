@@ -18,16 +18,25 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="../static/css/styles.css" rel="stylesheet" />
     </head>
-    <body id="page-top">
+    <body id="home">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">
+                <a class="navbar-brand" href="#home">
                     <img src="../static/assets/icon.png" alt="Logo CroPred" width="50" height="50">
                     CroPred
                 </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#crop">Crop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
+        <!-- Predict -->
         <header class="masthead">
             <div class="container px-4 px-lg-5 h-100">
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
@@ -42,35 +51,35 @@
                             <div class="row">
                                 <div class="col">
                                     <label for='n' class="text-white-75 form-label"><b>Nitrogen(N) value in soil</b></label>
-                                    <input type="number" class="form-control form-control-lg" name="n" placeholder="0" min="0" required="required" autocomplete="off"><br><br>
+                                    <input type="number" class="form-control form-control-lg" name="n" placeholder="0" min="0" required="required" autocomplete="off"><br>
                                 </div>
                                 <div class="col">
                                     <label for='p' class="text-white-75 form-label"><b>Phosphorous(P) value in soil</b></label>
-                                    <input type='number' class="form-control form-control-lg" name='p' placeholder='0' min="0" required='required' autocomplete="off"><br><br>
+                                    <input type='number' class="form-control form-control-lg" name='p' placeholder='0' min="0" required='required' autocomplete="off"><br>
                                 </div>
                                 <div class="col">
                                     <label for='k' class="text-white-75 form-label"><b>Potassium(K) value in soil</b></label>
-                                    <input type='number' class="form-control form-control-lg" name='k' placeholder="0" min="0" required='required' autocomplete="off"><br><br>
+                                    <input type='number' class="form-control form-control-lg" name='k' placeholder="0" min="0" required='required' autocomplete="off"><br>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <label for='Temperature' class="text-white-75 form-label"><b>Temperature in celcius</b></label>
-                                    <input type='number' id="floatNumber" class="form-control form-control-lg" name='Temperature' placeholder="0.00" min="0" step=".01" required='required' autocomplete="off"><br><br>
+                                    <input type='number' id="floatNumber" class="form-control form-control-lg" name='Temperature' placeholder="0.00" min="0" step=".01" required='required' autocomplete="off"><br>
                                 </div>
                                 <div class="col">
                                     <label for="Humidity" class="text-white-75 form-label"><b>Humidity in percent</b></label><br>
-                                    <input type="number" class="form-control form-control-lg" name="Humidity" placeholder="0" min="0" required='required' autocomplete="off"><br><br>
+                                    <input type="number" class="form-control form-control-lg" name="Humidity" placeholder="0.00" min="0" step=".01" required='required' autocomplete="off"><br>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <label for="PH" class="text-white-75 form-label"><b>PH value of the soil</b></label><br>
-                                    <input type="number" id="floatNumber" class="form-control form-control-lg" name="PH" placeholder="0.00" min="0" step=".01" required='required' autocomplete="off"><br><br>
+                                    <input type="number" id="floatNumber" class="form-control form-control-lg" name="PH" placeholder="0.00" min="0" step=".01" required='required' autocomplete="off"><br>
                                 </div>
                                 <div class="col">
                                     <label for="rain_fall" class="text-white-75 form-label"><B>Rain Fall in millimeters (mm)</B></label><br>
-                                    <input type='number' id="floatNumber" class="form-control form-control-lg" name='rain_fall' placeholder="0.00" min="0" step=".01" required='required' autocomplete="off"><br><br>
+                                    <input type='number' id="floatNumber" class="form-control form-control-lg" name='rain_fall' placeholder="0.00" min="0" step=".01" required='required' autocomplete="off"><br>
                                 </div> 
                             </div>
                             <button class="btn btn-primary btn-xl">Predict</button>
@@ -82,9 +91,239 @@
                 </div>
             </div>
         </header>
+        <!-- Crop -->
+        <section class="page-section bg-primary" id="crop">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-black mt-0">Crop Growing Conditions</h2>
+                        <hr class="divider divider-dark" />
+                        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="10" aria-label="Slide 11"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="11" aria-label="Slide 12"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="12" aria-label="Slide 13"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="13" aria-label="Slide 14"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="14" aria-label="Slide 15"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="15" aria-label="Slide 16"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="16" aria-label="Slide 17"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="17" aria-label="Slide 18"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="18" aria-label="Slide 19"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="19" aria-label="Slide 20"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="20" aria-label="Slide 21"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="21" aria-label="Slide 22"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="../static/assets/img/apples.jpg" class="d-block" alt="Apple">
+                                <div class="carousel-caption">
+                                  <h5>Apple</h5>
+                                  <p>Apples grow best in full sun. An apple tree planted in partial sunlight will not bear as many fruits like an apple planted in full sun. Apples grow best in well-drained loamy soil, although they will grow in more sandy soil or in soil with some clay. Apples grow best in a neutral soil pH of 6.0 to 7.0.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/banana.jpg" class="d-block" alt="Banana">
+                                <div class="carousel-caption">
+                                  <h5>Banana</h5>
+                                  <p>The optimal temperature for banana growing is 78° to 86°F. Plants require 10 to 15 months of frost-free weather to produce a flower stalk. In very hot weather, bananas must receive ample water. Bananas grow best in full sun, but the leaves and fruit will sunburn and scorch in bright sunlight when temperatures are high.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/blackgram.jpg" class="d-block" alt="Blackgram">
+                                <div class="carousel-caption">
+                                  <h5>Blackgram</h5>
+                                  <p>Blackgram can be grown on variety of soils ranging from sandy soils to heavy cotton soils. The most ideal soil is a well drained loam with pH of 6.5 to 7.8. Black gram cannot be grown on alkaline and saline soils. Land is prepared like any other kharif season pulse crop.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/chickpea.jpg" class="d-block" alt="Chickpea">
+                                <div class="carousel-caption">
+                                  <h5>Chickpea</h5>
+                                  <p>Chickpeas need a well-drained soil with full sun. The ideal is a relatively poor soil, as high levels of nutrients encourage lush growth, prone to developing mildews and related diseases. Avoid heavy clays or shady sites.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/coconut.jpg" class="d-block" alt="Coconut">
+                                <div class="carousel-caption">
+                                  <h5>Coconut</h5>
+                                  <p>Coconut palms tolerate some drought, but overall are moisture-loving plants that grow in sandy and loamy soils. They grow beautifully in any tropical climate that provides at least 25 inches of annual rainfall, up to 157 inches. Climates with warm, rainy winters and hot, humid and rainy summers are ideal.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/coffee.jpg" class="d-block" alt="Coffee">
+                                <div class="carousel-caption">
+                                  <h5>Coffee</h5>
+                                  <p>The most important conditions necessary for a coffee tree to grow is the presence of a temperate or tropical climate where there is no frost, ample sunshine, and plenty of water. And of course, too much direct sunlight or hydration can have a reverse and detrimental effect upon the trees.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/cotton.jpg" class="d-block" alt="Cotton">
+                                <div class="carousel-caption">
+                                  <h5>Cotton</h5>
+                                  <p>Cotton plants require specific climatic conditions, namely the availability of sufficient rain during growth and dry conditions at harvest. Sufficient rainfall is very necessary in early period, flowering and fruit filling (age 70-80 days).</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/grapes.jpg" class="d-block" alt="Grapes">
+                                <div class="carousel-caption">
+                                  <h5>Grapes</h5>
+                                  <p>Grapes are woody perennial vines. Plant in full sun to provide the heat required to ripen the fruit. Each vine needs about 6 feet of space. Flowers and fruit develop on new shoots called canes.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/jute.jpg" class="d-block" alt="Jute">
+                                <div class="carousel-caption">
+                                  <h5>Jute</h5>
+                                  <p>Temperatures ranging to more than 25 °C and relative humidity of 70%–90% are favorable for successful cultivation. Jute requires 160–200 cm of rainfall yearly with extra needed during the sowing period. River basins or alluvial or loamy soils are best for jute cultivation.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/kidneybeans.jpg" class="d-block" alt="Kidney beans">
+                                <div class="carousel-caption">
+                                  <h5>Kidney Bean</h5>
+                                  <p>Kidney beans will need at least six hours of full sun a day for proper growth. Prepare your soil. You want to have loose, well-draining soil with a pH between 6.0 and 7.0 because the beans don't respond well to high levels of moisture. Kidney beans generate their own nitrogen, so you won't need to use mulch.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/lentil.jpg" class="d-block" alt="Lentil">
+                                <div class="carousel-caption">
+                                  <h5>Lentil</h5>
+                                  <p>Lentils need full sun areas. They prefer loose, well-drained soil that is rich in organic matter. They grow best in soil with a pH between 6.0 and 6.5. Sow lentil seeds 1 t0 1½ inches deep, deeper if the soil is dry and space seeds 1 inch apart.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/maize.jpg" class="d-block" alt="Maize">
+                                <div class="carousel-caption">
+                                  <h5>Maize</h5>
+                                  <p>The maize crop requires sufficient moisture in the soil since its inception. Temperature of 18 to 23 degree Celsius for deposition and 28 degree Celsius temperature is considered good for growth and development. Maize can be grown in all types of soil.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/mango.jpg" class="d-block" alt="Mango">
+                                <div class="carousel-caption">
+                                  <h5>Mango</h5>
+                                  <p>Mangoes are a strictly tropical fruit. They love the tropics. The best climate to grow mangoes is frost free with cool, dry winters and steamy, hot summers. Mangoes like growing in light and free draining soils, they don't need rich soil.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/mothbeans.jpg" class="d-block" alt="Moth Beans">
+                                <div class="carousel-caption">
+                                  <h5>Moth Beans</h5>
+                                  <p>The ideal temperature level for growing Moth bean is between 24°C and 32°C. But the Moth bean plants can also tolerate up to 45°C during the day. The ideal annual rainfall is between 500 and 750 mm is required for growing Moth bean and also does well with 300 mm annual rainfall.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/mungbean.jpg" class="d-block" alt="Mung Beans">
+                                <div class="carousel-caption">
+                                  <h5>Mung Bean</h5>
+                                  <p>Mung beans grow well in full sun, about eight to 10 hours of daily sun, and loamy, well-drained soil that has a pH of 5.8 to 7.0. The tender annual produces pods at or above foliage level, which makes harvesting easy. Mung beans are resistant to most insect and disease problems.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/muskmelon.jpg" class="d-block" alt="Muskmelon">
+                                <div class="carousel-caption">
+                                  <h5>Muskmelon</h5>
+                                  <p>Muskmelons are a warm season crop, adapted to average monthly temperatures of 65 to 75 degrees F, and needing ample soil moisture and nutrients for growth. During the ripening period the best quality melons are produced when hot, dry conditions prevail.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/orange.jpg" class="d-block" alt="Orange">
+                                <div class="carousel-caption">
+                                  <h5>Orange</h5>
+                                  <p>Orange trees are climate-sensitive plants that have quite definite temperature requirements. When they are actively growing, they do best if temperatures range from 55 to 100 degrees Fahrenheit. They become dormant in winter and require temperatures no lower the 35 F or higher than 50 F during this period.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/papaya.jpg" class="d-block" alt="Papaya">
+                                <div class="carousel-caption">
+                                  <h5>Papaya</h5>
+                                  <p>To successfully grow Papayas, you need a frost free climate, lots of sunlight, lots of water and good soil. If you give your plant all of these conditions, then you can grow a papaya from seed and generally have fruit in 6 to 12 months. Growing Tips for Papayas: Climate: Thrive in subtropical and tropical climates.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/pigeonpeas.jpg" class="d-block" alt="Pigeonpeas">
+                                <div class="carousel-caption">
+                                  <h5>Pigeonpeas</h5>
+                                  <p>Pigeon Pea suits a sub-tropical to tropical climate and thrives in a warm position with adequate water. It prefers warmer temperatures and is not frost tolerant. Pigeon Pea tolerates various soil types, low nutrient levels and will grow well in a soil pH from 5 to 8.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/pomegranate.jpg" class="d-block" alt="Pomegranate">
+                                <div class="carousel-caption">
+                                  <h5>Pomegranate</h5>
+                                  <p>Grow pomegranates in well-drained soil; deep loamy soil is best. Pomegranates can grow in sandy to clay soil. A soil pH of 5.5 to 7.5 is optimal. Plant pomegranates in full sun in a location sheltered from the wind.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/rice.jpg" class="d-block" alt="Rice">
+                                <div class="carousel-caption">
+                                  <h5>Rice</h5>
+                                  <p>Rice crop needs a hot and humid climate. It is best suited to regions which have high humidity, prolonged sunshine and an assured supply of water. The average temperature required throughout the life period of the crop ranges from 21 to 37º C. Maximum temp which the crop can tolerate 400C to 42 0C.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="../static/assets/img/watermelon.jpg" class="d-block" alt="Watermelon">
+                                <div class="carousel-caption">
+                                  <h5>Watermelon</h5>
+                                  <p>Watermelon plants love the heat, and need a long and warm growing season of at least 70 to 85 days, depending on the variety, to produce sweet fruit. They grow best when daytime temperatures fall between 70 and 80 degrees Fahrenheit, and nighttime temperatures fall between 65 and 70 degrees Fahrenheit.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About -->
+        <section class="page-section bg-dark" id="about">
+          <div class="container px-4 px-lg-5 text-center ">
+              <h2 class="text-white mt-0">Our Team</h2>
+              <hr class="divider" />
+              <div class="row justify-content-md-center">
+                <div class="col-sm-3 mb-5">
+                  <div class="card">
+                    <img src="../static/assets/img/yoga.png" class="card-img-top" alt="Sang Putu Yoga Pramana">
+                    <div class="card-body">
+                      <h5 class="card-title">Sang Putu Yoga Pramana</h5>
+                      <p class="card-text">Student at Ganesha University of Education</p>
+                      <a href="https://github.com/SangtuYoga" target="_blank" class="btn btn-primary"><i class="bi bi-github"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="card">
+                    <img src="../static/assets/img/user.png" class="card-img-top" alt="Kivlan Khair Wijayanto">
+                    <div class="card-body">
+                      <h5 class="card-title">Kivlan Khair Wijayanto</h5>
+                      <p class="card-text">Student at Sepuluh Nopember Institute of Technology</p>
+                      <a href="https://github.com/plannnn" target="_blank" class="btn btn-primary"><i class="bi bi-github"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </section>
         <!-- Footer-->
         <footer class="bg-light py-4">
-            <div class="container px-4 px-lg-5 fs-3"><div class="small text-center text-muted">Copyright &copy; 2021 - CroPred</div></div>
+            <div class="container px-4 px-lg-5 fs-3"><div class="small text-center text-muted">Copyright &copy; 2021 - CroPred | CSD-080</div></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

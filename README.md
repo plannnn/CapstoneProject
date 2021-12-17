@@ -1,5 +1,8 @@
 # CapstoneProject
 Capstone Project Studi Independen
+Team ID: CSD-080
+M004T5007 - Kivlan Khair Wijayanto
+M298R4297 - Sang Putu Yoga Pramana
 
 # Crop-Recommendation
 Dataset didapatkan dari Kaggle : https://www.kaggle.com/atharvaingle/crop-recommendation-dataset
@@ -36,7 +39,9 @@ Berdasarkan Akurasi Model yang didapat, model yang digunakan adalah Random Fores
 Aplikasi ini menggunakan platform Heroku untuk Deployment. URL Aplikasi (Sementara): https://cropred.herokuapp.com/
 ## Bentuk Website:<br>
 Sejauh ini Bentuk Web sebagai berikut, (dapat dirubah kedepannya)
-![image](https://user-images.githubusercontent.com/80215981/145406005-fc51d6c5-c7f8-46fd-be22-a5717d0124d4.png)
+![image](https://user-images.githubusercontent.com/80215981/146590714-eaa081aa-4798-4d69-a67d-cbd10875e6b5.png)
+![image](https://user-images.githubusercontent.com/80215981/146590763-648c08b5-6f09-4c12-a569-622e37ed3347.png)
+![image](https://user-images.githubusercontent.com/80215981/146590860-09c4315d-7220-408d-96ee-63e0e4e66c6e.png)
 ## Demo :
 ### Demo Website :<br>
 ![Demo Website](https://media.giphy.com/media/xAcdKwMQuFFqkMNEFP/giphy.gif)

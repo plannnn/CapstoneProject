@@ -105,10 +105,12 @@ header.masthead {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-size: cover;
 }
 header.masthead h1, header.masthead .h1 {
   font-size: 2rem;
+}
+.result{
+  color: #FFBD35 !important;
 }
 .carousel-item > img {
   height: 400px;
@@ -174,7 +176,7 @@ header.masthead h1, header.masthead .h1 {
   header.masthead {
     min-height: 40rem;
     padding-top: 4.5rem;
-    padding-bottom: 0;
+    padding-bottom: 5.5rem;
   }
   header.masthead p {
     font-size: 1.15rem;

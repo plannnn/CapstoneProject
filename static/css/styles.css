@@ -122,6 +122,12 @@ header.masthead h1, header.masthead .h1 {
   box-shadow: 0 0 10px 0 #111;
   transition: all 0.3s ease;
 }
+.card-result {
+  margin: 0 auto;
+  float: none; 
+  margin-bottom: 10px;
+}
+
 .card > img {
   object-fit: cover;
   height: 250px;
@@ -175,8 +181,8 @@ header.masthead h1, header.masthead .h1 {
 @media (min-width: 992px) {
   header.masthead {
     min-height: 40rem;
-    padding-top: 4.5rem;
-    padding-bottom: 5.5rem;
+    padding-top: 5.5rem;
+    padding-bottom: 8rem;
   }
   header.masthead p {
     font-size: 1.15rem;

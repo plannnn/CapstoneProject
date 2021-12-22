@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from flask import Flask, request, jsonify, render_template
-import pickle 
+import pickle
 
 app = Flask(__name__)
 model = pickle.load(open('classifier.pkl', 'rb'))
@@ -12,6 +12,7 @@ a = ['Apple', 'Banana', 'blackgram', 'chickpea', 'coconut', 'coffee', 'cotton', 
 
 #buat dataframe label dan angkanya, kayak di notebook
 
+
 a = pd.DataFrame(a, columns=['label'])
 b = pd.DataFrame(b, columns=['encoded'])
 classes = pd.concat([a,b], axis=1).set_index('label')
@@ -20,7 +21,7 @@ classes = pd.concat([a,b], axis=1).set_index('label')
 def welcome():
     return render_template('crop.html')
 
-@app.route('/predict', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict():
     n = request.form.get('n')
     p = request.form.get('p')
@@ -35,7 +36,7 @@ def predict():
     for i in range(0, len(classes)):
         if(classes.encoded[i]==pred):
             output=classes.index[i].upper()
-    return render_template('crop.html', prediction_text='Recommended Crop is {}'.format(output))
+    return render_template('crop.html', prediction_text=format(output))
 
 if __name__ == "__main__":
     app.run(debug=True)

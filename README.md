@@ -1,6 +1,6 @@
 # CapstoneProject
 Capstone Project Studi Independen<br>
-Team ID: CSD-080<br>
+Team ID: CSD-197<br>
 M004T5007 - Kivlan Khair Wijayanto<br>
 M298R4297 - Sang Putu Yoga Pramana
 
@@ -38,10 +38,12 @@ Berdasarkan Akurasi Model yang didapat, model yang digunakan adalah Random Fores
 ## Deployment :
 Aplikasi ini menggunakan platform Heroku untuk Deployment. URL Aplikasi (Sementara): https://cropred.herokuapp.com/
 ## Bentuk Website:<br>
-Sejauh ini Bentuk Web sebagai berikut, (dapat dirubah kedepannya)
-![image](https://user-images.githubusercontent.com/80215981/146590714-eaa081aa-4798-4d69-a67d-cbd10875e6b5.png)
-![image](https://user-images.githubusercontent.com/80215981/146590763-648c08b5-6f09-4c12-a569-622e37ed3347.png)
-![image](https://user-images.githubusercontent.com/80215981/146590860-09c4315d-7220-408d-96ee-63e0e4e66c6e.png)
+Bentuk Web sebagai berikut,
+![image](https://user-images.githubusercontent.com/80215981/147048384-272946a1-fd19-475d-bca0-6428dbc8c9d1.png)
+![image](https://user-images.githubusercontent.com/80215981/147048535-faf4d3fc-babe-45be-98e5-d18d44b24925.png)
+![image](https://user-images.githubusercontent.com/80215981/147048577-2dc56799-dbca-4339-8fdf-ac935cb32a99.png)
+![image](https://user-images.githubusercontent.com/80215981/147048624-6c73dc6a-dc80-41fa-be8b-b6cc03ce7a46.png)
+
 ## Demo :
 ### Demo Website :<br>
 ![Demo Website](https://media.giphy.com/media/xAcdKwMQuFFqkMNEFP/giphy.gif)

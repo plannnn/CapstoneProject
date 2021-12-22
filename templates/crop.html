@@ -82,11 +82,254 @@
                                     <input type='number' id="floatNumber" class="form-control form-control-lg" name='rain_fall' placeholder="0.00" min="0" step=".01" required='required' autocomplete="off"><br>
                                 </div> 
                             </div>
-                            <button class="btn btn-primary btn-xl">Predict</button>
+                            <button class="btn btn-primary btn-xl" id="btn-predict">Predict</button>
                             <br>
                     </form>
+                    <!-- ['Apple', 'Banana', 'blackgram', 'chickpea', 'coconut', 'coffee', 'cotton', 'grapes', 'jute', 'kidney beans', 'lentil', 'maize', 'mango', 'moth beans', 'mung bean', 'muskmelon', 'orange', 'papaya', 'pigeonpeas', 'pomegranate', 'Rice', 'Watermelon'] -->
                     <div id="result">
-                        <h1 class="text-white result font-weight-bold mt-5 mb-5">{{prediction_text}}</h1>
+                        {% if prediction_text == "APPLE" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Apple.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/apples.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Apple</h5>
+                              <p class="card-text">Apples grow best in full sun. An apple tree planted in partial sunlight will not bear as many fruits like an apple planted in full sun. Apples grow best in well-drained loamy soil, although they will grow in more sandy soil or in soil with some clay. Apples grow best in a neutral soil pH of 6.0 to 7.0.</p>
+                              <a href="#" class="btn btn-primary">More Crop</a>
+                            </div>
+                          </div>
+
+                        {% elif prediction_text == "BANANA" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Banana.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/banana.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Banana</h5>
+                              <p class="card-text">The optimal temperature for banana growing is 78° to 86°F. Plants require 10 to 15 months of frost-free weather to produce a flower stalk. In very hot weather, bananas must receive ample water. Bananas grow best in full sun, but the leaves and fruit will sunburn and scorch in bright sunlight when temperatures are high.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+
+                        {% elif prediction_text == "BLACKGRAM" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Blackgram.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/blackgram.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Blackgram</h5>
+                              <p class="card-text">Blackgram can be grown on variety of soils ranging from sandy soils to heavy cotton soils. The most ideal soil is a well drained loam with pH of 6.5 to 7.8. Black gram cannot be grown on alkaline and saline soils. Land is prepared like any other kharif season pulse crop.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+
+                        {% elif prediction_text == "CHICKPEA" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Chickpea.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/chickpea.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Chickpea</h5>
+                              <p class="card-text">Chickpeas need a well-drained soil with full sun. The ideal is a relatively poor soil, as high levels of nutrients encourage lush growth, prone to developing mildews and related diseases. Avoid heavy clays or shady sites.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+
+                        {% elif prediction_text == "COCONUT" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Coconut.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/coconut.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Coconut</h5>
+                              <p class="card-text">Coconut palms tolerate some drought, but overall are moisture-loving plants that grow in sandy and loamy soils. They grow beautifully in any tropical climate that provides at least 25 inches of annual rainfall, up to 157 inches. Climates with warm, rainy winters and hot, humid and rainy summers are ideal.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+                        
+                        {% elif prediction_text == "COFFEE" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Coffee.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/coffee.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Coffee</h5>
+                              <p class="card-text">The most important conditions necessary for a coffee tree to grow is the presence of a temperate or tropical climate where there is no frost, ample sunshine, and plenty of water. And of course, too much direct sunlight or hydration can have a reverse and detrimental effect upon the trees.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+
+                        {% elif prediction_text == "COTTON" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Cotton.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/cotton.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Cotton</h5>
+                              <p class="card-text">Cotton plants require specific climatic conditions, namely the availability of sufficient rain during growth and dry conditions at harvest. Sufficient rainfall is very necessary in early period, flowering and fruit filling (age 70-80 days).</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+                        
+                        {% elif prediction_text == "GRAPES" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Grapes.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/grapes.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Grapes</h5>
+                              <p class="card-text">Grapes are woody perennial vines. Plant in full sun to provide the heat required to ripen the fruit. Each vine needs about 6 feet of space. Flowers and fruit develop on new shoots called canes.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+
+                        {% elif prediction_text == "JUTE" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Jute.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/jute.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Jute</h5>
+                              <p class="card-text">Temperatures ranging to more than 25 °C and relative humidity of 70%–90% are favorable for successful cultivation. Jute requires 160–200 cm of rainfall yearly with extra needed during the sowing period. River basins or alluvial or loamy soils are best for jute cultivation.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+                          
+                        {% elif prediction_text == "KIDNEY BEANS" %}
+                        <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Kidney beans.</span></h1>
+                        <div class="card card-result" style="width: 80%;">
+                          <img src="../static/assets/img/kidneybeans.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Kidney beans</h5>
+                            <p class="card-text">Kidney beans will need at least six hours of full sun a day for proper growth. Prepare your soil. You want to have loose, well-draining soil with a pH between 6.0 and 7.0 because the beans don't respond well to high levels of moisture. Kidney beans generate their own nitrogen, so you won't need to use mulch.</p>
+                            <a href="#crop" class="btn btn-primary">More Crops</a>
+                          </div>
+                        </div>
+
+                        {% elif prediction_text == "LENTIL" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Lentil.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/lentil.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Lentil</h5>
+                              <p class="card-text">Lentils need full sun areas. They prefer loose, well-drained soil that is rich in organic matter. They grow best in soil with a pH between 6.0 and 6.5. Sow lentil seeds 1 t0 1½ inches deep, deeper if the soil is dry and space seeds 1 inch apart.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+
+                        {% elif prediction_text == "MAIZE" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Maize.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/maize.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Maize</h5>
+                              <p class="card-text">The maize crop requires sufficient moisture in the soil since its inception. Temperature of 18 to 23 degree Celsius for deposition and 28 degree Celsius temperature is considered good for growth and development. Maize can be grown in all types of soil.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+
+                        {% elif prediction_text == "MANGO" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Mango.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/mango.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Mango</h5>
+                              <p class="card-text">Mangoes are a strictly tropical fruit. They love the tropics. The best climate to grow mangoes is frost free with cool, dry winters and steamy, hot summers. Mangoes like growing in light and free draining soils, they don't need rich soil.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+                        
+                        {% elif prediction_text == "MOTH BEANS" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Moth beans.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/mothbeans.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Moth beans</h5>
+                              <p class="card-text">The ideal temperature level for growing Moth bean is between 24°C and 32°C. But the Moth bean plants can also tolerate up to 45°C during the day. The ideal annual rainfall is between 500 and 750 mm is required for growing Moth bean and also does well with 300 mm annual rainfall.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+
+                        {% elif prediction_text == "MUNG BEAN" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Mung bean.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/mungbean.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Mung bean</h5>
+                              <p class="card-text">Mung beans grow well in full sun, about eight to 10 hours of daily sun, and loamy, well-drained soil that has a pH of 5.8 to 7.0. The tender annual produces pods at or above foliage level, which makes harvesting easy. Mung beans are resistant to most insect and disease problems.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+
+                        {% elif prediction_text == "MUSKMELON" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Muskmelon.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/muskmelon.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Muskmelon</h5>
+                              <p class="card-text">Muskmelons are a warm season crop, adapted to average monthly temperatures of 65 to 75 degrees F, and needing ample soil moisture and nutrients for growth. During the ripening period the best quality melons are produced when hot, dry conditions prevail.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+
+                        {% elif prediction_text == "ORANGE" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Orange.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/orange.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Orange</h5>
+                              <p class="card-text">Orange trees are climate-sensitive plants that have quite definite temperature requirements. When they are actively growing, they do best if temperatures range from 55 to 100 degrees Fahrenheit. They become dormant in winter and require temperatures no lower the 35 F or higher than 50 F during this period.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+                          
+                        {% elif prediction_text == "PAPAYA" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Papaya.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/papaya.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Papaya</h5>
+                              <p class="card-text">To successfully grow Papayas, you need a frost free climate, lots of sunlight, lots of water and good soil. If you give your plant all of these conditions, then you can grow a papaya from seed and generally have fruit in 6 to 12 months. Growing Tips for Papayas: Climate: Thrive in subtropical and tropical climates.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+
+                        {% elif prediction_text == "PIGEONPEAS" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Pigeonpeas.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/pigeonpeas.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Pigeonpeas</h5>
+                              <p class="card-text">Pigeon Pea suits a sub-tropical to tropical climate and thrives in a warm position with adequate water. It prefers warmer temperatures and is not frost tolerant. Pigeon Pea tolerates various soil types, low nutrient levels and will grow well in a soil pH from 5 to 8.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+
+                        {% elif prediction_text == "POMEGRANATE" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Pomegranate.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/pomegranate.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Pomegranate</h5>
+                              <p class="card-text">Grow pomegranates in well-drained soil; deep loamy soil is best. Pomegranates can grow in sandy to clay soil. A soil pH of 5.5 to 7.5 is optimal. Plant pomegranates in full sun in a location sheltered from the wind.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+
+                          {% elif prediction_text == "RICE" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Rice.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/rice.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Rice</h5>
+                              <p class="card-text">Rice crop needs a hot and humid climate. It is best suited to regions which have high humidity, prolonged sunshine and an assured supply of water. The average temperature required throughout the life period of the crop ranges from 21 to 37º C. Maximum temp which the crop can tolerate 400C to 42 0C.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+
+                          {% elif prediction_text == "WATERMELON" %}
+                          <h1 class="text-white mt-5 mb-5">Prediction Crop is <span class='result font-weight-bold'>Watermelon.</span></h1>
+                          <div class="card card-result" style="width: 80%;">
+                            <img src="../static/assets/img/watermelon.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Watermelon</h5>
+                              <p class="card-text">Watermelon plants love the heat, and need a long and warm growing season of at least 70 to 85 days, depending on the variety, to produce sweet fruit. They grow best when daytime temperatures fall between 70 and 80 degrees Fahrenheit, and nighttime temperatures fall between 65 and 70 degrees Fahrenheit.</p>
+                              <a href="#crop" class="btn btn-primary">More Crops</a>
+                            </div>
+                          </div>
+
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -128,7 +371,7 @@
                                 <img src="../static/assets/img/apples.jpg" class="d-block" alt="Apple">
                                 <div class="carousel-caption">
                                   <h5>Apple</h5>
-                                  <p>Apples grow best in full sun. An apple tree planted in partial sunlight will not bear as many fruits like an apple planted in full sun. Apples grow best in well-drained loamy soil, although they will grow in more sandy soil or in soil with some clay. Apples grow best in a neutral soil pH of 6.0 to 7.0.</p>
+                                  <p>aaaaa</p>
                                 </div>
                               </div>
                               <div class="carousel-item">
@@ -337,6 +580,7 @@
                     $(this).val(cleanNum);
                 });
             });
+            
         </script>
         <script src="../static/js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>

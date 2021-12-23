@@ -45,7 +45,4 @@ Bentuk Web sebagai berikut,
 ![image](https://user-images.githubusercontent.com/80215981/147048624-6c73dc6a-dc80-41fa-be8b-b6cc03ce7a46.png)
 
 ## Demo :
-### Demo Website :<br>
-![Demo Website](https://media.giphy.com/media/xAcdKwMQuFFqkMNEFP/giphy.gif)
-### Demo Mobile :<br>
-![Demo Mobile](https://media.giphy.com/media/9zbShOXfzC5Ex0mZ3Z/giphy.gif)
+![Demo Website](https://media.giphy.com/media/Q3zwesXv2LIBJJ7TzH/giphy.gif)
